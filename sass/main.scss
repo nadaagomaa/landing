@@ -118,7 +118,6 @@ body{
         
         p{
             @include text($size-16,$size-12,$light-gray,$inter-reguler-400);
-
         }
         a{
             @include btns-colored($size-16);
