@@ -1,0 +1,17 @@
+.btns{
+    font-family: $inter-medium-500;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.btn-colored{
+    background-color: $primary-color;
+    color: white;
+}
+.main-btn-padding{
+    @media (min-width:992px) {
+        padding: $p-14px $p-32px;
+    } 
+    @media (max-width:991.98px) {
+        padding: $p-10px $p-20px;       
+    }
+}

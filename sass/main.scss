@@ -1,0 +1,129 @@
+@import "../sass/helpers/variables";
+@import "../sass/helpers/mixins";
+@import "../sass/helpers/extends";
+@import "../sass/helpers/fonts";
+body{
+    header{
+        background-color: $bg-color;
+        img{
+            @media (max-width:575.98px) {
+                width: 120px;
+                height: 19px;
+            }
+        }
+        .navbar{
+            .navbar-toggler{
+                &:hover{
+                    opacity: .7;
+                }
+                @media (max-width: 767.98px){
+                    font-size: medium;
+                }
+            }
+            .nav-btns{
+                a{
+                    @media (min-width:992px) {
+                        padding: $p-10px $p-20px;
+                    } 
+                    @media (max-width:991.98px) {
+                           width: 91px;
+                           padding: $p-10px $p-15px;
+                           
+                    }
+                }
+                .log-in-btn{
+                    @include btn-not-colored($size-14,$primary-color);   
+                }
+                .sign-up-btn{
+                    @include btns-colored($size-14);
+                }
+            }
+            .navbar-collapse{
+                @media (max-width: 991.98px) {     
+                    position: fixed;  
+                    top: 0;
+                    inset-inline-end: -$menu-width; 
+                    width: $menu-width;
+                    height: 100%;
+                    background-color: $bg-color;
+                    z-index: 1000;      
+                    transition: inset-inline-end $animation-duration ease-in-out;
+                    padding: $p-20px;
+                    &.show {
+                        inset-inline-end: 0; 
+                    }
+                }
+
+                .navbar-nav{
+                    .nav-link{
+                        @include dark-text;
+                        &:hover{
+                            opacity: .7;
+                        }
+                    }
+                    .active{
+                        font-family: $inter-medium-500;
+                    }
+                }
+            }
+           
+           
+           
+        }
+        .overlay-backdrop {
+            @media (max-width: 991.98px) { 
+                position: fixed;
+                top: 0;
+                inset-inline-start: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 999;  
+                display: none; 
+                opacity: 0;
+                transition: opacity  ease-in-out;
+                &.show {
+                  display: block;
+                  opacity: 1;
+                }   
+            }
+        }
+    }
+   .banner{
+    background-color: $bg-color;
+    @media (min-width:992px) {
+        padding-top: $banner-padding;
+        padding-bottom: $banner-padding;
+    }
+    @media (max-width:991.98px) {
+        padding-top: $banner-padding-down-lg;
+        padding-bottom: $banner-padding-down-lg;
+    }
+    .banner-text{
+        @media (min-width:992px) {
+           padding-top: $banner-text-padding;
+           padding-bottom: $banner-text-padding;     
+        }
+        @media (max-width:991.98px) {
+           
+           padding-bottom: $banner-text-padding-down-lg;
+        }
+        .dark-h1{
+            @include banner-h1($secondary-color);
+        }
+        .green-h1{
+            @include banner-h1($primary-color);
+        } 
+           
+        
+        p{
+            @include text($size-16,$size-12,$light-gray,$inter-reguler-400);
+
+        }
+        a{
+            @include btns-colored($size-16);
+            @extend .main-btn-padding;
+        }
+    }
+   }
+}
