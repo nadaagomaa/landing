@@ -100,28 +100,90 @@ body{
         padding-bottom: $banner-padding-down-lg;
     }
     .banner-text{
-        @media (min-width:992px) {
-           padding-top: $banner-text-padding;
-           padding-bottom: $banner-text-padding;     
+        h1{
+            @include banner-h1;
+            & > *:not(span)  {
+                color:$dark-text-color;
+            }
+            span{      
+                color: $primary-color;
         }
-        @media (max-width:991.98px) {
-           
-           padding-bottom: $banner-text-padding-down-lg;
-        }
-        .dark-h1{
-            @include banner-h1($secondary-color);
-        }
-        .green-h1{
-            @include banner-h1($primary-color);
-        } 
-           
-        
+        }    
         p{
             @include text($size-16,$size-12,$light-gray,$inter-reguler-400);
         }
         a{
             @include btns-colored($size-16);
             @extend .main-btn-padding;
+        }
+    }
+   }
+   .community{
+    h2{
+        @include font-600-36;
+    }
+    p{
+        @include description($size-16);
+    }
+    div{
+        @media(min-width:1200px) {
+            gap: 110px;
+        }
+        @media (min-width:992px)and (max-width:1199.98px) {
+            gap:70px;
+        }
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 50px;
+        h3{
+            @include font-700-28;
+        }
+        .description{
+            @include description($size-14);        
+        }
+    }
+   }
+   .rafiki{
+    h3{
+        @include font-600-36;
+    }
+    p{
+        @include description($size-14);
+    }
+    a{
+        @include btns-colored($size-16);
+        @extend .main-btn-padding;
+        
+    }
+   }
+   .achievements{
+    background-color: $bg-color;
+    h3{
+        @include font-600-36;
+    }
+    .description{
+        @include dark-text;
+    }
+    h4{
+        @include font-700-28;
+    }
+    p{
+        @include description($size-16);
+    }
+    img{
+        margin-right: 10px;
+    }
+    .achievements-rows{
+        @media (max-width:575.98px) {
+            gap:50px;
+        }
+    }
+    .achievements-row{
+        @media (min-width:576px) {
+            gap:100px;
+        }
+        @media (max-width:575.98px) {
+            gap:50px;
         }
     }
    }

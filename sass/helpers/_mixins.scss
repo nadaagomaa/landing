@@ -19,9 +19,8 @@
     font-family: $inter-reguler-400;
     color: $dark-text-color;
 }
-@mixin banner-h1($color){
+@mixin banner-h1{
     font-family: $inter-semibold-600;
-    color: $color;
     @media (min-width:1200px) {
         font-size: $size-64;
     }
@@ -38,4 +37,32 @@
         font-size: $size2;
     }    
     color:$color;
+}
+@mixin font-600-36{
+    font-family: $inter-semibold-600;
+    @media (min-width:768px) {
+        font-size: $size-36;
+    } 
+    @media (max-width:575.98px) {
+        font-size: $size-20;
+    }
+    & > *:not(span)  {
+        color: $secondary-color;
+    }
+    span{  
+        color: $primary-color;
+    }   
+}
+@mixin font-700-28{
+    font-family: $inter-bold-700;
+    @media (min-width:768px) {
+        font-size: $size-28;
+    } 
+    
+    color: $secondary-color;
+}
+@mixin description($size){
+    font-family: $inter-reguler-400;
+    font-size: $size;
+    color:$light-gray;
 }

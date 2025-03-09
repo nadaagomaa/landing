@@ -1,21 +1,21 @@
-.btns, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn {
+.btns, body .rafiki a, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn {
   font-family: "inter-medium-500";
   border-radius: 6px;
   text-decoration: none;
 }
 
-.btn-colored, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn:hover {
+.btn-colored, body .rafiki a, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn:hover {
   background-color: #4CAF4F;
   color: white;
 }
 
 @media (min-width: 992px) {
-  .main-btn-padding, body .banner .banner-text a {
+  .main-btn-padding, body .rafiki a, body .banner .banner-text a {
     padding: 14px 32px;
   }
 }
 @media (max-width: 991.98px) {
-  .main-btn-padding, body .banner .banner-text a {
+  .main-btn-padding, body .rafiki a, body .banner .banner-text a {
     padding: 10px 20px;
   }
 }
@@ -84,8 +84,8 @@ body header .navbar .nav-btns .sign-up-btn:hover {
   body header .navbar .navbar-collapse {
     position: fixed;
     top: 0;
-    inset-inline-end: -150px;
-    width: 150px;
+    inset-inline-end: -200px;
+    width: 200px;
     height: 100%;
     background-color: #F5F7FA;
     z-index: 1000;
@@ -140,44 +140,24 @@ body .banner {
     padding-bottom: 40px;
   }
 }
-@media (min-width: 992px) {
-  body .banner .banner-text {
-    padding-top: 70px;
-    padding-bottom: 70px;
-  }
-}
-@media (max-width: 991.98px) {
-  body .banner .banner-text {
-    padding-bottom: 40px;
-  }
-}
-body .banner .banner-text .dark-h1 {
+body .banner .banner-text h1 {
   font-family: "inter-semibold-600";
-  color: #4D4D4D;
 }
 @media (min-width: 1200px) {
-  body .banner .banner-text .dark-h1 {
+  body .banner .banner-text h1 {
     font-size: 64px;
   }
 }
 @media (min-width: 576px) and (max-width: 1199.98px) {
-  body .banner .banner-text .dark-h1 {
+  body .banner .banner-text h1 {
     font-size: 50px;
   }
 }
-body .banner .banner-text .green-h1 {
-  font-family: "inter-semibold-600";
+body .banner .banner-text h1 > *:not(span) {
+  color: #18191F;
+}
+body .banner .banner-text h1 span {
   color: #4CAF4F;
-}
-@media (min-width: 1200px) {
-  body .banner .banner-text .green-h1 {
-    font-size: 64px;
-  }
-}
-@media (min-width: 576px) and (max-width: 1199.98px) {
-  body .banner .banner-text .green-h1 {
-    font-size: 50px;
-  }
 }
 body .banner .banner-text p {
   font-family: "inter-reguler-400";
@@ -198,4 +178,146 @@ body .banner .banner-text a {
 }
 body .banner .banner-text a:hover {
   opacity: 0.7;
+}
+body .community h2 {
+  font-family: "inter-semibold-600";
+}
+@media (min-width: 768px) {
+  body .community h2 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .community h2 {
+    font-size: 20px;
+  }
+}
+body .community h2 > *:not(span) {
+  color: #4D4D4D;
+}
+body .community h2 span {
+  color: #4CAF4F;
+}
+body .community p {
+  font-family: "inter-reguler-400";
+  font-size: 16px;
+  color: #717171;
+}
+body .community div {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  body .community div {
+    gap: 110px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body .community div {
+    gap: 70px;
+  }
+}
+body .community div h3 {
+  font-family: "inter-bold-700";
+  color: #4D4D4D;
+}
+@media (min-width: 768px) {
+  body .community div h3 {
+    font-size: 28px;
+  }
+}
+body .community div .description {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #717171;
+}
+body .rafiki h3 {
+  font-family: "inter-semibold-600";
+}
+@media (min-width: 768px) {
+  body .rafiki h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .rafiki h3 {
+    font-size: 20px;
+  }
+}
+body .rafiki h3 > *:not(span) {
+  color: #4D4D4D;
+}
+body .rafiki h3 span {
+  color: #4CAF4F;
+}
+body .rafiki p {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #717171;
+}
+body .rafiki a {
+  font-size: 16px;
+}
+body .rafiki a:hover {
+  opacity: 0.7;
+}
+body .achievements {
+  background-color: #F5F7FA;
+}
+body .achievements h3 {
+  font-family: "inter-semibold-600";
+}
+@media (min-width: 768px) {
+  body .achievements h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .achievements h3 {
+    font-size: 20px;
+  }
+}
+body .achievements h3 > *:not(span) {
+  color: #4D4D4D;
+}
+body .achievements h3 span {
+  color: #4CAF4F;
+}
+body .achievements .description {
+  font-size: 16px;
+  font-family: "inter-reguler-400";
+  color: #18191F;
+}
+body .achievements h4 {
+  font-family: "inter-bold-700";
+  color: #4D4D4D;
+}
+@media (min-width: 768px) {
+  body .achievements h4 {
+    font-size: 28px;
+  }
+}
+body .achievements p {
+  font-family: "inter-reguler-400";
+  font-size: 16px;
+  color: #717171;
+}
+body .achievements img {
+  margin-right: 10px;
+}
+@media (max-width: 575.98px) {
+  body .achievements .achievements-rows {
+    gap: 50px;
+  }
+}
+@media (min-width: 576px) {
+  body .achievements .achievements-row {
+    gap: 100px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .achievements .achievements-row {
+    gap: 50px;
+  }
 }/*# sourceMappingURL=main.css.map */
