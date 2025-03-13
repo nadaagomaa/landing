@@ -6,10 +6,7 @@ body{
     header{
         background-color: $bg-color;
         img{
-            @media (max-width:575.98px) {
-                width: 120px;
-                height: 19px;
-            }
+            @extend .logo-size;
         }
         .navbar{
             .navbar-toggler{
@@ -27,8 +24,7 @@ body{
                     } 
                     @media (max-width:991.98px) {
                            width: 91px;
-                           padding: $p-10px $p-15px;
-                           
+                           padding: $p-10px $p-15px;          
                     }
                 }
                 .log-in-btn{
@@ -37,6 +33,9 @@ body{
                 .sign-up-btn{
                     @include btns-colored($size-14);
                 }
+            }
+            .lang-btn{
+                @include btn-not-colored($size-14,$primary-color)
             }
             .navbar-collapse{
                 @media (max-width: 991.98px) {     
@@ -53,7 +52,6 @@ body{
                         inset-inline-end: 0; 
                     }
                 }
-
                 .navbar-nav{
                     .nav-link{
                         @include dark-text;
@@ -65,10 +63,7 @@ body{
                         font-family: $inter-medium-500;
                     }
                 }
-            }
-           
-           
-           
+            }      
         }
         .overlay-backdrop {
             @media (max-width: 991.98px) { 
@@ -98,6 +93,10 @@ body{
     @media (max-width:991.98px) {
         padding-top: $banner-padding-down-lg;
         padding-bottom: $banner-padding-down-lg;
+        img{
+             width: 60%;
+            height: auto;
+        }
     }
     .banner-text{
         h1{
@@ -110,7 +109,7 @@ body{
         }
         }    
         p{
-            @include text($size-16,$size-12,$light-gray,$inter-reguler-400);
+           @include description($size-16);
         }
         a{
             @include btns-colored($size-16);
@@ -143,7 +142,7 @@ body{
         }
     }
    }
-   .rafiki{
+   .rafiki,.calender{
     h3{
         @include font-600-36;
     }
@@ -152,39 +151,87 @@ body{
     }
     a{
         @include btns-colored($size-16);
-        @extend .main-btn-padding;
-        
+        @extend .main-btn-padding;     
     }
    }
    .achievements{
     background-color: $bg-color;
-    h3{
+    padding-top: $p-20px;
+    padding-bottom: $p-20px;
+    .header{
         @include font-600-36;
     }
     .description{
         @include dark-text;
     }
-    h4{
+    .number-header{
         @include font-700-28;
     }
     p{
         @include description($size-16);
     }
-    img{
+    .achievements-img{
+        width: 48px;
+        height: 48px;
         margin-right: 10px;
     }
-    .achievements-rows{
-        @media (max-width:575.98px) {
-            gap:50px;
+   .achievement-description{
+    width: 117px;
+   }
+   }
+   footer{
+    background-color: $footer-bg;
+    a{
+        img{
+            @extend .logo-size;
         }
     }
-    .achievements-row{
-        @media (min-width:576px) {
-            gap:100px;
+    p{
+        @include font-inter-400($size-14,$bg-color)
+    }
+    .social-icons{
+        a{
+            padding-right: $p-10px;
+            &:hover{
+                opacity: .7;
+            }
+            img{
+                width: 32px;
+                height: 32px;        
+            }
+        }  
+    }
+    h4{
+        @include font-inter-600($size-20,$white);
+    }
+    a{
+        @include font-inter-400($size-14,$bg-color);
+        text-decoration: none;
+        &:hover{
+            opacity: .7;
         }
-        @media (max-width:575.98px) {
-            gap:50px;
+    }
+    .form-div{
+        width: 255px;
+        .input-group{
+            .form-control{ 
+                border-color:  rgba(255, 255, 255, 0.2); ;  
+                background-color: rgba(255, 255, 255, 0.2); 
+                &::placeholder{
+                    @include font-inter-400($size-14,$mail-input-text);
+                }
+            }  
+            button{
+                background-color: rgba(255, 255, 255, 0.2);     
+                img{
+                    width: 17px;
+                    height: 17px;
+                }
+            }
         }
+    }  
+    hr{
+        color: $bg-color;
     }
    }
 }

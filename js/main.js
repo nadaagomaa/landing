@@ -5,10 +5,15 @@
     const CloseMenuBtn = document.getElementById('closeMenuBtn');
     const overlayBackdrop = document.querySelector('.overlay-backdrop'); 
     const body = document.body;
+    const originalOverflow = body.style.overflow;
     function toggleMenu() {
       navbarCollapse.classList.toggle('show');
       overlayBackdrop.classList.toggle('show');
-      body.classList.toggle('overflow-hidden');
+      if (navbarCollapse.classList.contains('show')) {  
+        body.style.overflow = 'hidden';
+      } else {  
+        body.style.overflow = originalOverflow;
+      }
     }
     navbarToggler.addEventListener('click', function(e) {
       e.stopPropagation();
@@ -22,6 +27,7 @@
       if (window.innerWidth  && navbarCollapse.classList.contains('show')) {
         navbarCollapse.classList.remove('show');
         overlayBackdrop.classList.remove('show');
+        body.style.overflow = originalOverflow;
       }
     }
     // Debounce function

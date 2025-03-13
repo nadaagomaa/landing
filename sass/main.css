@@ -1,22 +1,29 @@
-.btns, body .rafiki a, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn {
+.btns, body .rafiki a, body .calender a, body .banner .banner-text a, body header .navbar .lang-btn, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn {
   font-family: "inter-medium-500";
   border-radius: 6px;
   text-decoration: none;
 }
 
-.btn-colored, body .rafiki a, body .banner .banner-text a, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn:hover {
+.btn-colored, body .rafiki a, body .calender a, body .banner .banner-text a, body header .navbar .lang-btn:hover, body header .navbar .nav-btns .sign-up-btn, body header .navbar .nav-btns .log-in-btn:hover {
   background-color: #4CAF4F;
-  color: white;
+  color: #ffffff;
 }
 
 @media (min-width: 992px) {
-  .main-btn-padding, body .rafiki a, body .banner .banner-text a {
+  .main-btn-padding, body .rafiki a, body .calender a, body .banner .banner-text a {
     padding: 14px 32px;
   }
 }
 @media (max-width: 991.98px) {
-  .main-btn-padding, body .rafiki a, body .banner .banner-text a {
+  .main-btn-padding, body .rafiki a, body .calender a, body .banner .banner-text a {
     padding: 10px 20px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .logo-size, body footer a img, body header img {
+    width: 120px;
+    height: 19px;
   }
 }
 
@@ -42,12 +49,6 @@
 }
 body header {
   background-color: #F5F7FA;
-}
-@media (max-width: 575.98px) {
-  body header img {
-    width: 120px;
-    height: 19px;
-  }
 }
 body header .navbar .navbar-toggler:hover {
   opacity: 0.7;
@@ -78,6 +79,12 @@ body header .navbar .nav-btns .sign-up-btn {
   font-size: 14px;
 }
 body header .navbar .nav-btns .sign-up-btn:hover {
+  opacity: 0.7;
+}
+body header .navbar .lang-btn {
+  color: #4CAF4F;
+}
+body header .navbar .lang-btn:hover {
   opacity: 0.7;
 }
 @media (max-width: 991.98px) {
@@ -139,16 +146,20 @@ body .banner {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+  body .banner img {
+    width: 60%;
+    height: auto;
+  }
 }
 body .banner .banner-text h1 {
   font-family: "inter-semibold-600";
 }
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   body .banner .banner-text h1 {
     font-size: 64px;
   }
 }
-@media (min-width: 576px) and (max-width: 1199.98px) {
+@media (min-width: 576px) and (max-width: 1399.98px) {
   body .banner .banner-text h1 {
     font-size: 50px;
   }
@@ -161,17 +172,8 @@ body .banner .banner-text h1 span {
 }
 body .banner .banner-text p {
   font-family: "inter-reguler-400";
+  font-size: 16px;
   color: #717171;
-}
-@media (min-width: 992px) {
-  body .banner .banner-text p {
-    font-size: 16px;
-  }
-}
-@media (max-width: 991.98px) {
-  body .banner .banner-text p {
-    font-size: 12px;
-  }
 }
 body .banner .banner-text a {
   font-size: 16px;
@@ -232,56 +234,58 @@ body .community div .description {
   font-size: 14px;
   color: #717171;
 }
-body .rafiki h3 {
+body .rafiki h3, body .calender h3 {
   font-family: "inter-semibold-600";
 }
 @media (min-width: 768px) {
-  body .rafiki h3 {
+  body .rafiki h3, body .calender h3 {
     font-size: 36px;
   }
 }
 @media (max-width: 575.98px) {
-  body .rafiki h3 {
+  body .rafiki h3, body .calender h3 {
     font-size: 20px;
   }
 }
-body .rafiki h3 > *:not(span) {
+body .rafiki h3 > *:not(span), body .calender h3 > *:not(span) {
   color: #4D4D4D;
 }
-body .rafiki h3 span {
+body .rafiki h3 span, body .calender h3 span {
   color: #4CAF4F;
 }
-body .rafiki p {
+body .rafiki p, body .calender p {
   font-family: "inter-reguler-400";
   font-size: 14px;
   color: #717171;
 }
-body .rafiki a {
+body .rafiki a, body .calender a {
   font-size: 16px;
 }
-body .rafiki a:hover {
+body .rafiki a:hover, body .calender a:hover {
   opacity: 0.7;
 }
 body .achievements {
   background-color: #F5F7FA;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-body .achievements h3 {
+body .achievements .header {
   font-family: "inter-semibold-600";
 }
 @media (min-width: 768px) {
-  body .achievements h3 {
+  body .achievements .header {
     font-size: 36px;
   }
 }
 @media (max-width: 575.98px) {
-  body .achievements h3 {
+  body .achievements .header {
     font-size: 20px;
   }
 }
-body .achievements h3 > *:not(span) {
+body .achievements .header > *:not(span) {
   color: #4D4D4D;
 }
-body .achievements h3 span {
+body .achievements .header span {
   color: #4CAF4F;
 }
 body .achievements .description {
@@ -289,12 +293,12 @@ body .achievements .description {
   font-family: "inter-reguler-400";
   color: #18191F;
 }
-body .achievements h4 {
+body .achievements .number-header {
   font-family: "inter-bold-700";
   color: #4D4D4D;
 }
 @media (min-width: 768px) {
-  body .achievements h4 {
+  body .achievements .number-header {
     font-size: 28px;
   }
 }
@@ -303,21 +307,70 @@ body .achievements p {
   font-size: 16px;
   color: #717171;
 }
-body .achievements img {
+body .achievements .achievements-img {
+  width: 48px;
+  height: 48px;
   margin-right: 10px;
 }
-@media (max-width: 575.98px) {
-  body .achievements .achievements-rows {
-    gap: 50px;
-  }
+body .achievements .achievement-description {
+  width: 117px;
 }
-@media (min-width: 576px) {
-  body .achievements .achievements-row {
-    gap: 100px;
-  }
+body footer {
+  background-color: #263238;
 }
-@media (max-width: 575.98px) {
-  body .achievements .achievements-row {
-    gap: 50px;
-  }
+body footer p {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #F5F7FA;
+}
+body footer .social-icons a {
+  padding-right: 10px;
+}
+body footer .social-icons a:hover {
+  opacity: 0.7;
+}
+body footer .social-icons a img {
+  width: 32px;
+  height: 32px;
+}
+body footer h4 {
+  font-family: "inter-semibold-600";
+  font-size: 20px;
+  color: #ffffff;
+}
+body footer a {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #F5F7FA;
+  text-decoration: none;
+}
+body footer a:hover {
+  opacity: 0.7;
+}
+body footer .form-div {
+  width: 255px;
+}
+body footer .form-div .input-group .form-control {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+body footer .form-div .input-group .form-control::-moz-placeholder {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #D9DBE1;
+}
+body footer .form-div .input-group .form-control::placeholder {
+  font-family: "inter-reguler-400";
+  font-size: 14px;
+  color: #D9DBE1;
+}
+body footer .form-div .input-group button {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+body footer .form-div .input-group button img {
+  width: 17px;
+  height: 17px;
+}
+body footer hr {
+  color: #F5F7FA;
 }/*# sourceMappingURL=main.css.map */
