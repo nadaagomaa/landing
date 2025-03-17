@@ -9,17 +9,6 @@
   color: #ffffff;
 }
 
-@media (min-width: 992px) {
-  .main-btn-padding, body .rafiki a, body .calender a, body .banner .banner-text a {
-    padding: 14px 32px;
-  }
-}
-@media (max-width: 991.98px) {
-  .main-btn-padding, body .rafiki a, body .calender a, body .banner .banner-text a {
-    padding: 10px 20px;
-  }
-}
-
 @media (max-width: 575.98px) {
   .logo-size, body footer a img, body header img {
     width: 120px;
@@ -181,6 +170,21 @@ body .banner .banner-text a {
 body .banner .banner-text a:hover {
   opacity: 0.7;
 }
+@media (min-width: 576px) {
+  body .banner .banner-text a {
+    width: 128px;
+    height: 52px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .banner .banner-text a {
+    width: 100px;
+    height: 40px;
+  }
+}
+body .community {
+  margin-bottom: 50px;
+}
 body .community h2 {
   font-family: "inter-semibold-600";
 }
@@ -205,11 +209,6 @@ body .community p {
   font-size: 16px;
   color: #717171;
 }
-body .community div {
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom: 50px;
-}
 @media (min-width: 1200px) {
   body .community div {
     gap: 110px;
@@ -220,16 +219,33 @@ body .community div {
     gap: 70px;
   }
 }
-body .community div h3 {
+body .community div .community-part {
+  padding-inline-start: 30px;
+  padding-inline-end: 30px;
+}
+body .community div .community-part .icons {
+  position: relative;
+}
+body .community div .community-part .icons img:first-child {
+  position: absolute;
+  margin-inline-start: 10px;
+  z-index: -1;
+}
+body .community div .community-part .icons img:last-child {
+  position: relative;
+  top: 4px;
+  z-index: 1;
+}
+body .community div .community-part h3 {
   font-family: "inter-bold-700";
   color: #4D4D4D;
 }
 @media (min-width: 768px) {
-  body .community div h3 {
+  body .community div .community-part h3 {
     font-size: 28px;
   }
 }
-body .community div .description {
+body .community div .community-part .description {
   font-family: "inter-reguler-400";
   font-size: 14px;
   color: #717171;
@@ -263,6 +279,18 @@ body .rafiki a, body .calender a {
 }
 body .rafiki a:hover, body .calender a:hover {
   opacity: 0.7;
+}
+@media (min-width: 576px) {
+  body .rafiki a, body .calender a {
+    width: 151px;
+    height: 52px;
+  }
+}
+@media (max-width: 575.98px) {
+  body .rafiki a, body .calender a {
+    width: 120px;
+    height: 40px;
+  }
 }
 body .achievements {
   background-color: #F5F7FA;
@@ -324,7 +352,7 @@ body footer p {
   color: #F5F7FA;
 }
 body footer .social-icons a {
-  padding-right: 10px;
+  padding-inline-end: 10px;
 }
 body footer .social-icons a:hover {
   opacity: 0.7;

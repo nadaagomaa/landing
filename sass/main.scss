@@ -113,11 +113,17 @@ body{
         }
         a{
             @include btns-colored($size-16);
-            @extend .main-btn-padding;
+           @media (min-width:576px) {
+            @include btn-size($width-128px,$height-52px);
+           }
+            @media (max-width:575.98px) {
+                @include btn-size($width-100px,$height-40px);  
+            }
         }
     }
    }
    .community{
+    margin-bottom: 50px;
     h2{
         @include font-600-36;
     }
@@ -131,15 +137,29 @@ body{
         @media (min-width:992px)and (max-width:1199.98px) {
             gap:70px;
         }
-        padding-left: 30px;
-        padding-right: 30px;
-        margin-bottom: 50px;
+        .community-part{
+        padding-inline-start: 30px;
+        padding-inline-end: 30px;
+        .icons{
+            position: relative;
+            img:first-child{
+                position:absolute; 
+                margin-inline-start: 10px;
+                z-index: -1;
+            }
+            img:last-child{
+                position: relative;
+                top:4px;
+                z-index: 1;
+            }
+        }
         h3{
             @include font-700-28;
         }
         .description{
             @include description($size-14);        
         }
+        }     
     }
    }
    .rafiki,.calender{
@@ -151,7 +171,13 @@ body{
     }
     a{
         @include btns-colored($size-16);
-        @extend .main-btn-padding;     
+       // @extend .main-btn-padding;
+       @media (min-width:576px) {
+        @include btn-size($width-151px,$height-52px);
+       }
+        @media (max-width:575.98px) {
+            @include btn-size($width-120px,$height-40px);  
+        }         
     }
    }
    .achievements{
@@ -191,7 +217,7 @@ body{
     }
     .social-icons{
         a{
-            padding-right: $p-10px;
+            padding-inline-end: $p-10px;
             &:hover{
                 opacity: .7;
             }

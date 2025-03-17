@@ -7,14 +7,6 @@
     background-color: $primary-color;
     color: $white;
 }
-.main-btn-padding{
-    @media (min-width:992px) {
-        padding: $p-14px $p-32px;
-    } 
-    @media (max-width:991.98px) {
-        padding: $p-10px $p-20px;       
-    }
-}
 .logo-size{
     @media (max-width:575.98px) {
         width: 120px;
