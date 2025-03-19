@@ -119,14 +119,12 @@ body .banner {
 }
 @media (min-width: 992px) {
   body .banner {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-block: 70px;
   }
 }
 @media (max-width: 991.98px) {
   body .banner {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-block: 40px;
   }
   body .banner img {
     width: 60%;
@@ -176,8 +174,7 @@ body .banner .banner-text a:hover {
   }
 }
 body .community {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-block: 40px;
 }
 body .community h2 {
   font-family: "inter-semibold-600";
@@ -204,49 +201,49 @@ body .community p {
   color: #717171;
 }
 @media (min-width: 1200px) {
-  body .community div {
+  body .community .row {
     gap: 70px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  body .community div {
+  body .community .row {
     gap: 40px;
   }
 }
 @media (max-width: 991.98px) {
-  body .community div {
+  body .community .row {
     gap: 25px;
   }
 }
-body .community div .community-part {
+body .community .row .community-part {
   padding: 24px 32px 8px;
   box-shadow: 0 0.125rem 0.25rem #ABBED1;
 }
-body .community div .community-part .icons {
-  position: relative;
+body .community .row .community-part .icons {
+  width: 75px;
   height: 60px;
+  position: relative;
 }
-body .community div .community-part .icons img:first-child {
-  position: absolute;
-  width: 50px;
-  inset-inline-start: calc(50% - 25px + 16px);
+body .community .row .community-part .icons img:first-child {
+  position: relative;
   z-index: -1;
 }
-body .community div .community-part .icons img:last-child {
-  position: relative;
+body .community .row .community-part .icons img:last-child {
+  position: absolute;
+  inset-inline-start: 0%;
   top: 4px;
   z-index: 1;
 }
-body .community div .community-part h3 {
+body .community .row .community-part h3 {
   font-family: "inter-bold-700";
   color: #4D4D4D;
 }
 @media (min-width: 768px) {
-  body .community div .community-part h3 {
+  body .community .row .community-part h3 {
     font-size: 28px;
   }
 }
-body .community div .community-part .description {
+body .community .row .community-part .description {
   font-family: "inter-reguler-400";
   font-size: 14px;
   color: #717171;
@@ -295,8 +292,7 @@ body .rafiki a:hover, body .calender a:hover {
 }
 body .achievements {
   background-color: #F5F7FA;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-block: 20px;
 }
 body .achievements .header {
   font-family: "inter-semibold-600";
@@ -376,8 +372,10 @@ body footer a {
 body footer a:hover {
   opacity: 0.7;
 }
-body footer .form-div {
-  width: 255px;
+@media (max-width: 991.98px) {
+  body footer .form-div {
+    width: 255px;
+  }
 }
 body footer .form-div .input-group .form-control {
   border-color: rgba(255, 255, 255, 0.2);
