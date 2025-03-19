@@ -14,7 +14,7 @@
         opacity: .7;
     }
 }
-@mixin btn-size($width,$height){
+@mixin size($width,$height){
     width: $width;
     height: $height;
 }

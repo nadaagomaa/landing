@@ -18,14 +18,8 @@ body{
                 }
             }
             .nav-btns{
-                a{
-                    @media (min-width:992px) {
-                        padding: $p-10px $p-20px;
-                    } 
-                    @media (max-width:991.98px) {
-                           width: 91px;
-                           padding: $p-10px $p-15px;          
-                    }
+                a{    
+                        @include size($width-91px,$height-40px)      
                 }
                 .log-in-btn{
                     @include btn-not-colored($size-14,$primary-color);   
@@ -114,10 +108,10 @@ body{
         a{
             @include btns-colored($size-16);
            @media (min-width:576px) {
-            @include btn-size($width-128px,$height-52px);
+            @include size($width-128px,$height-52px);
            }
             @media (max-width:575.98px) {
-                @include btn-size($width-100px,$height-40px);  
+                @include size($width-100px,$height-40px);  
             }
         }
     }
@@ -132,19 +126,24 @@ body{
     }
     div{
         @media(min-width:1200px) {
-            gap: 110px;
+            gap: 70px;
         }
         @media (min-width:992px)and (max-width:1199.98px) {
-            gap:70px;
+            gap:40px;
+        }
+        @media (max-width:991.98px) {
+            gap:25px;
         }
         .community-part{
-        padding-inline-start: 30px;
-        padding-inline-end: 30px;
+         padding: 24px 32px 8px; 
+         box-shadow:  0 .125rem .25rem $shadow-color;   
         .icons{
             position: relative;
+            height: 60px;
             img:first-child{
                 position:absolute; 
-                margin-inline-start: 10px;
+                width: 50px;
+                inset-inline-start: calc(50% - (50px / 2) + 16px);
                 z-index: -1;
             }
             img:last-child{
@@ -171,12 +170,11 @@ body{
     }
     a{
         @include btns-colored($size-16);
-       // @extend .main-btn-padding;
        @media (min-width:576px) {
-        @include btn-size($width-151px,$height-52px);
+        @include size($width-151px,$height-52px);
        }
         @media (max-width:575.98px) {
-            @include btn-size($width-120px,$height-40px);  
+            @include size($width-120px,$height-40px);  
         }         
     }
    }
@@ -199,7 +197,7 @@ body{
     .achievements-img{
         width: 48px;
         height: 48px;
-        margin-right: 10px;
+        margin-inline-end: 10px;
     }
    .achievement-description{
     width: 117px;

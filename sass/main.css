@@ -47,16 +47,9 @@ body header .navbar .navbar-toggler:hover {
     font-size: medium;
   }
 }
-@media (min-width: 992px) {
-  body header .navbar .nav-btns a {
-    padding: 10px 20px;
-  }
-}
-@media (max-width: 991.98px) {
-  body header .navbar .nav-btns a {
-    width: 91px;
-    padding: 10px 15px;
-  }
+body header .navbar .nav-btns a {
+  width: 91px;
+  height: 40px;
 }
 body header .navbar .nav-btns .log-in-btn {
   color: #4CAF4F;
@@ -211,24 +204,31 @@ body .community p {
 }
 @media (min-width: 1200px) {
   body .community div {
-    gap: 110px;
+    gap: 70px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   body .community div {
-    gap: 70px;
+    gap: 40px;
+  }
+}
+@media (max-width: 991.98px) {
+  body .community div {
+    gap: 25px;
   }
 }
 body .community div .community-part {
-  padding-inline-start: 30px;
-  padding-inline-end: 30px;
+  padding: 24px 32px 8px;
+  box-shadow: 0 0.125rem 0.25rem #ABBED1;
 }
 body .community div .community-part .icons {
   position: relative;
+  height: 60px;
 }
 body .community div .community-part .icons img:first-child {
   position: absolute;
-  margin-inline-start: 10px;
+  width: 50px;
+  inset-inline-start: calc(50% - 25px + 16px);
   z-index: -1;
 }
 body .community div .community-part .icons img:last-child {
@@ -338,7 +338,7 @@ body .achievements p {
 body .achievements .achievements-img {
   width: 48px;
   height: 48px;
-  margin-right: 10px;
+  margin-inline-end: 10px;
 }
 body .achievements .achievement-description {
   width: 117px;
